@@ -1,0 +1,78 @@
+.sillas {
+    justify-content: center;
+    grid-area: section;
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows:  0.3fr repeat(6,200px);
+    grid-row-gap: 7%;
+    grid-column-gap: 2%;
+    grid-template-areas:
+    ". titulo ." 
+    ". silla1 ."
+    ". silla2 ."
+    ". silla3 ."
+    ". silla4 ."
+    ". silla5 ."
+    ". silla6 .";
+    margin-bottom: 20em;
+    padding-bottom: 7em;
+    background: $colorBlanco;
+}
+.card {
+    border: 3px solid $colorGris;
+}
+.sillas .titulo{
+    text-align: center;
+    grid-area: titulo;
+
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-size: 1.6rem;
+    letter-spacing: 0.40em;
+    color: #393e46;
+}
+
+.sillas p{
+    text-align: center;
+}
+.silla1{
+    grid-area: silla1;
+}
+.silla2{
+    grid-area: silla2;   
+}
+.silla3{
+    grid-area: silla3;
+}
+.silla4{
+    grid-area: silla4;  
+}
+.silla5{
+    grid-area: silla5;
+}
+.silla6{
+    grid-area: silla6;
+
+}
+
+@media screen and (min-width: 768px) {
+    .sillas{
+        grid-template-columns: 1fr 45% 45% 1fr;
+        grid-template-rows:  0.3fr repeat(3,500px);
+        grid-row-gap: 7%;
+        grid-column-gap: 2%;
+        grid-template-areas:
+        ". titulo titulo ." 
+        ". silla1 silla2 ."
+        ". silla3 silla4 ."
+        ". silla5 silla6 .";
+        padding-bottom: 8em;
+        align-content: center;
+        background: $colorBlanco;
+        .titulo{
+            padding-top: 5em;
+        }
+    }
+}

@@ -1,0 +1,609 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url(/assets/imgs/ImgBackground/mobilemobile.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url(/assets/imgs/ImgBackground/pexels-rachel-claire-4846106.jpg);
+  }
+}
+
+footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  background: #121212;
+  text-align: center;
+  width: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 4%;
+  font-size: 1.6em;
+}
+
+footer h5 {
+  background: #393e46;
+  padding: 4%;
+}
+
+footer ul {
+  padding: 4%;
+  background: black;
+  width: 100%;
+  height: auto;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.6fr 3fr auto auto;
+      grid-template-rows: 0.6fr 3fr auto auto;
+  grid-row-gap: 2%;
+  -ms-grid-columns: 1fr 90% 1fr;
+      grid-template-columns: 1fr 90% 1fr;
+      grid-template-areas: "nav nav nav"  ". header ."  " section section section"  "footer footer footer";
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 0.6fr 3fr auto auto;
+        grid-template-rows: 0.6fr 3fr auto auto;
+        grid-template-areas: "nav" "header" "section" "footer";
+  }
+}
+
+header {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: header;
+}
+
+header img {
+  width: 100%;
+  max-height: 1400px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: nav;
+  width: 100%;
+  background: white;
+  border-bottom: gray solid 1px;
+  position: fixed;
+  top: 0px;
+  max-height: 5%;
+  z-index: 1;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+nav ul a {
+  font-size: 1.1em;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  color: black;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+nav ul a:hover {
+  color: white;
+}
+
+nav li {
+  padding-top: 0.3em;
+  border: black solid 1px;
+  padding: 12px;
+}
+
+nav li:hover {
+  background-color: #f7f7f7;
+}
+
+.indexSection {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: section;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 90% 5%;
+      grid-template-columns: 5% 90% 5%;
+  -ms-grid-rows: 0.3fr (200px)[3];
+      grid-template-rows: 0.3fr repeat(3, 200px);
+      grid-template-areas: ". subt ." ". card1 ." ". card2 ." ". card3 .";
+  row-gap: 8%;
+  padding-bottom: 7em;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: #fcfefe;
+  row-gap: 4/ 0%;
+}
+
+.indexSection > p {
+  padding-top: 5em;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: subt;
+  font-size: 1.6rem;
+  letter-spacing: 0.40em;
+  color: #393e46;
+}
+
+.indexSection div a {
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 16px;
+  border: gray solid 1px;
+  border-radius: 10px;
+  width: 6ch;
+  height: 6ch;
+  color: #393e46;
+  background-color: #fbf2d5;
+}
+
+.indexSection div a:hover {
+  background-color: #fdc57b;
+  color: #fcfefe;
+}
+
+.card {
+  background: #5c636e;
+  border-radius: 1em;
+  -webkit-box-shadow: #5c636e 4px 4px 4px;
+          box-shadow: #5c636e 4px 4px 4px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.card p {
+  display: inline-block;
+  height: auto;
+  color: #fcfefe;
+  text-shadow: #393e46 1px 1px 1px;
+  position: relative;
+  top: 80%;
+  width: 100%;
+  background-color: #393e46;
+  padding: 3px;
+}
+
+.cardTienda {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: card1;
+}
+
+.cardGaleria {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: card2;
+}
+
+.cardContacto {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: card3;
+}
+
+@media screen and (max-width: 768px) {
+  .cardTienda .card {
+    background-image: url(/assets/imgs/ImgBackground/camamobil.jpg);
+  }
+  .cardGaleria .card {
+    background-image: url(/assets/imgs/ImgBackground/galeriamobil.jpg);
+  }
+  .cardContacto .card {
+    background-image: url(/assets/imgs/ImgBackground/contactomobil.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .indexSection {
+    -ms-grid-rows: 0.3fr (500px)[4];
+        grid-template-rows: 0.3fr repeat(4, 500px);
+    height: auto;
+    padding-bottom: 2em;
+  }
+  .indexSection > p {
+    padding-top: 18em;
+  }
+  .card {
+    margin-bottom: 2em;
+  }
+  .card p {
+    font-size: 2rem;
+    padding: 20px;
+  }
+  .cardTienda .card {
+    background-image: url(/assets/imgs/ImgBackground/cardtiendagrande.jpg);
+  }
+  .cardGaleria .card {
+    background-image: url(/assets/imgs/ImgBackground/cardgalleriagrande.jpg);
+  }
+  .cardContacto .card {
+    background-image: url(/assets/imgs/ImgBackground/cardcontactogrande.jpg);
+  }
+}
+
+.tienda {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: section;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 80% 10%;
+      grid-template-columns: 10% 80% 10%;
+  -ms-grid-rows: 0.3fr (200px)[4];
+      grid-template-rows: 0.3fr repeat(4, 200px);
+  row-gap: 8%;
+      grid-template-areas: ". subt ." ". card4 ." ". card5 ." ". card6 ." ". card7 .";
+  padding-bottom: 12em;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: #fcfefe;
+}
+
+.tienda > p {
+  padding-top: 8em;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: subt;
+  font-size: 1.6rem;
+  letter-spacing: 0.40em;
+  color: #393e46;
+}
+
+.card {
+  background: #5c636e;
+  border-radius: 1em;
+  -webkit-box-shadow: #5c636e 4px 4px 4px;
+          box-shadow: #5c636e 4px 4px 4px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.card p {
+  display: inline-block;
+  height: auto;
+  color: #fcfefe;
+  text-shadow: #393e46 1px 1px 1px;
+  position: relative;
+  top: 80%;
+  width: 100%;
+  background-color: #393e46;
+  padding: 3px;
+}
+
+.tienda .card4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: card4;
+}
+
+.tienda .card4 .card {
+  background-image: url(/assets/imgs/ImgSilla/silla1.jpg);
+}
+
+.tienda .card5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: card5;
+}
+
+.tienda .card5 .card {
+  background-image: url(/assets/imgs/ImgMesa/mesa1.jpg);
+}
+
+.tienda .card6 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: card6;
+}
+
+.tienda .card6 .card {
+  background-image: url(/assets/imgs/ImgSillon/sillon1.jpg);
+}
+
+.tienda .card7 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: card7;
+}
+
+.tienda .card7 .card {
+  background-image: url(/assets/imgs/ImgEscritorio/escritorio1.jpg);
+}
+
+@media screen and (min-width: 768px) {
+  .tienda {
+    -ms-grid-rows: 0.3fr (500px)[4];
+        grid-template-rows: 0.3fr repeat(4, 500px);
+    height: auto;
+    padding-bottom: 40em;
+  }
+  .tienda > p {
+    padding-top: 18em;
+  }
+  .card {
+    margin-bottom: 2em;
+  }
+  .card p {
+    font-size: 2rem;
+    padding: 20px;
+  }
+}
+
+.sillas {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: section;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  -ms-grid-columns: 10% 80% 10%;
+      grid-template-columns: 10% 80% 10%;
+  -ms-grid-rows: 0.3fr (200px)[6];
+      grid-template-rows: 0.3fr repeat(6, 200px);
+  grid-row-gap: 7%;
+  grid-column-gap: 2%;
+      grid-template-areas: ". titulo ."  ". silla1 ." ". silla2 ." ". silla3 ." ". silla4 ." ". silla5 ." ". silla6 .";
+  margin-bottom: 20em;
+  padding-bottom: 7em;
+  background: #fcfefe;
+}
+
+.card {
+  border: 3px solid #5c636e;
+}
+
+.sillas .titulo {
+  text-align: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: titulo;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-size: 1.6rem;
+  letter-spacing: 0.40em;
+  color: #393e46;
+}
+
+.sillas p {
+  text-align: center;
+}
+
+.silla1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: silla1;
+}
+
+.silla2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: silla2;
+}
+
+.silla3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: silla3;
+}
+
+.silla4 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: silla4;
+}
+
+.silla5 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: silla5;
+}
+
+.silla6 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 2;
+  grid-area: silla6;
+}
+
+@media screen and (min-width: 768px) {
+  .sillas {
+    -ms-grid-columns: 1fr 45% 45% 1fr;
+        grid-template-columns: 1fr 45% 45% 1fr;
+    -ms-grid-rows: 0.3fr (500px)[3];
+        grid-template-rows: 0.3fr repeat(3, 500px);
+    grid-row-gap: 7%;
+    grid-column-gap: 2%;
+        grid-template-areas: ". titulo titulo ."  ". silla1 silla2 ." ". silla3 silla4 ." ". silla5 silla6 .";
+    padding-bottom: 8em;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    background: #fcfefe;
+  }
+  .sillas .titulo {
+    padding-top: 5em;
+  }
+}
+
+.item {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: section;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -ms-grid-columns: 10% 80% 10%;
+      grid-template-columns: 10% 80% 10%;
+  -ms-grid-rows: 0.3fr 300px 1fr 50px 100px 100px;
+      grid-template-rows: 0.3fr 300px 1fr 50px 100px 100px;
+  grid-row-gap: 2%;
+      grid-template-areas: "title title title" ". img ." "description description description" "amount amount amount" "price price price" "add add add";
+  background: #fcfefe;
+  margin-bottom: 20em;
+}
+
+.itemTitle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-size: 1.6rem;
+  letter-spacing: 0.40em;
+  color: #393e46;
+}
+
+.item {
+  color: #393e46;
+  text-align: center;
+}
+
+.item div {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: img;
+}
+
+.item .itemDesc {
+  padding-top: 1em;
+  font-size: 1.4rem;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: description;
+  border-bottom: #393e46 solid 1px;
+}
+
+.item .amountContainer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: amount;
+}
+
+.item .amountContainer button {
+  width: 80%;
+}
+
+.item .itemPrice {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: price;
+  font-size: 1.8rem;
+}
+
+.item .addToCart {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: add;
+}
+
+.item .addToCart button {
+  width: 80%;
+  height: 80%;
+  border-radius: 6px;
+  font-size: 1.6rem;
+}
+
+.item .addToCart button:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #fcfefe;
+  background-color: #393e46;
+}
+
+@media screen and (min-width: 768px) {
+  .item {
+    width: 100%;
+    -ms-grid-columns: 5% 40% 40% 5%;
+        grid-template-columns: 5% 40% 40% 5%;
+    -ms-grid-rows: 0.3fr 300px 300px 200px;
+        grid-template-rows: 0.3fr 300px 300px 200px;
+        grid-template-areas: "title title title title" ". img description ." ". img description ." ". img price ." ". . add .";
+    grid-column-gap: 3%;
+  }
+  .item .itemTitle {
+    font-size: 2.2rem;
+  }
+  .item .addToCart {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    height: 80%;
+    width: 80%;
+  }
+  .item .addToCart button {
+    font-size: 2.2rem;
+    letter-spacing: 0.2em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,110 @@
+
+.indexSection {
+    grid-area: section;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 5% 90% 5%;
+	grid-template-rows: 0.3fr repeat(3,200px);
+	grid-template-areas: ". subt ." ". card1 ." ". card2 ." ". card3 .";
+	row-gap: 8%;
+	padding-bottom: 7em;
+    align-content: center;
+    background: $colorBlanco;
+	row-gap: 4/ 0%;
+    
+	>p { //Solo el p del subititulo se modifica
+        padding-top: 5em;
+		grid-area: subt;
+		font-size: $mediana;
+		letter-spacing: 0.40em;
+        color: $colorNegro;
+	}
+	div {
+		a {
+			text-decoration: none;
+			font-size: 1.1em;
+			padding: 16px;
+			border: gray solid 1px;
+			border-radius: 10px;
+			width: 6ch;
+			height: 6ch;
+			color: $colorNegro;
+			background-color: $cremaClaro;
+			&:hover {
+				background-color: $cremaOscuro;
+				color: $colorBlanco;
+			}
+		}
+	}
+
+}
+.card {
+	background: $colorGris;
+	border-radius: 1em;
+	box-shadow: $colorGris 4px 4px 4px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	p {
+		display: inline-block;
+		height: auto;
+		color: $colorBlanco;
+		text-shadow: $colorNegro 1px 1px 1px;
+		position: relative;
+		top: 80%;
+		width: 100%;
+		background-color: $colorNegro;
+		padding: 3px;
+	}
+}
+.cardTienda {
+	grid-area: card1;
+}
+.cardGaleria {
+	grid-area: card2;
+}
+.cardContacto {
+	grid-area: card3;
+}
+
+
+
+@media  screen and (max-width: 768px) {
+	.cardTienda .card{
+		background-image: url(/assets/imgs/ImgBackground/camamobil.jpg);
+	}
+	.cardGaleria .card{
+		background-image: url(/assets/imgs/ImgBackground/galeriamobil.jpg);
+	}
+	.cardContacto .card{
+		background-image: url(/assets/imgs/ImgBackground/contactomobil.jpg);
+	}
+
+}
+
+@media  screen and (min-width: 768px) {
+		.indexSection{
+			grid-template-rows: 0.3fr repeat(4,500px);
+			height: auto;
+			padding-bottom: 2em;
+			>p{
+				padding-top: 18em;
+			}
+		}
+		.card{
+			margin-bottom: 2em;
+			p{
+				font-size: $grande;
+				padding: 20px;
+			}
+		}
+	.cardTienda .card{
+		background-image: url(/assets/imgs/ImgBackground/cardtiendagrande.jpg);
+	}
+	.cardGaleria .card{
+		background-image: url(/assets/imgs/ImgBackground/cardgalleriagrande.jpg);
+	}
+	.cardContacto .card{ 
+		background-image: url(/assets/imgs/ImgBackground/cardcontactogrande.jpg);
+	}
+}

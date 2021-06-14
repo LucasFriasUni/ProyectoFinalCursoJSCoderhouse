@@ -1,0 +1,98 @@
+.item{
+    grid-area: section;
+    display: grid;
+    justify-content: center;
+    
+    width: 100%;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 0.3fr 300px 1fr 50px 100px 100px;
+    grid-row-gap: 2%;
+    grid-template-areas: 
+        "title title title"
+        ". img ."
+        "description description description"
+        "amount amount amount"
+        "price price price"
+        "add add add";
+        background: $colorBlanco;
+        margin-bottom: 20em;
+}
+
+.itemTitle{
+    grid-area: title;
+
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-size: 1.6rem;
+    letter-spacing: 0.40em;
+    color: #393e46;
+}
+.item{
+    color: $colorNegro;
+    text-align: center;
+    div{
+        grid-area: img;
+    }
+    .itemDesc{
+        padding-top: 1em;
+        font-size: $chica;
+        grid-area: description;
+        border-bottom: $colorNegro solid 1px;
+    }
+    .amountContainer {
+        grid-area: amount;
+        button {
+            width: 80%;
+        }
+    }
+    .itemPrice{
+        grid-area: price;
+        font-size: $normal;
+    }
+    .addToCart{
+        grid-area: add;
+        button{
+            width: 80%;
+            height: 80%;
+            border-radius: 6px;
+            font-size: $mediana;
+        }
+        button:hover{
+            transition: 0.2s;
+            color: $colorBlanco;
+            background-color: $colorNegro;
+
+        }
+    }
+
+}
+@media screen and (min-width: 768px) {
+    .item{
+        width: 100%;
+        grid-template-columns: 5% 40% 40% 5%;
+        grid-template-rows: 0.3fr 300px 300px 200px;
+        grid-template-areas:
+            "title title title title"
+            ". img description ."
+            ". img description ."
+            ". img price ."
+            ". . add .";
+            grid-column-gap: 3%;
+            .itemTitle{
+                font-size: $enorme;
+            }
+            .addToCart{
+                align-self: center;
+                justify-self: center;
+                height: 80%;
+                width: 80%;
+                button{
+                    font-size: $enorme;
+                    letter-spacing: 0.2em;
+
+                }
+            }
+    }
+
+}

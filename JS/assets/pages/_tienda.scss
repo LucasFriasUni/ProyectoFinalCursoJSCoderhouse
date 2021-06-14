@@ -1,0 +1,92 @@
+.tienda {
+	grid-area: section;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 10% 80% 10%;
+	grid-template-rows: 0.3fr repeat(4,200px);
+	row-gap: 8%;
+	grid-template-areas: ". subt ."
+                         ". card4 ."
+                         ". card5 ."
+                         ". card6 ."
+                         ". card7 .";
+                         padding-bottom: 12em;
+                         align-content: center;
+                         background: $colorBlanco;
+                         
+    >p { //Solo el p del subititulo se modifica
+        padding-top: 8em;
+		grid-area: subt;
+		font-size: $mediana;
+		letter-spacing: 0.40em;
+        color: $colorNegro;
+	}
+    
+}
+
+.card {
+	background: $colorGris;
+	border-radius: 1em;
+	box-shadow: $colorGris 4px 4px 4px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	p {
+		display: inline-block;
+		height: auto;
+		color: $colorBlanco;
+		text-shadow: $colorNegro 1px 1px 1px;
+		position: relative;
+		top: 80%;
+		width: 100%;
+		background-color: $colorNegro;
+		padding: 3px;
+	}
+}
+
+
+    .tienda{
+        .card4 {
+            grid-area: card4;
+            .card{
+                background-image: url(/assets/imgs/ImgSilla/silla1.jpg);
+            }
+        }
+        .card5 {
+            grid-area: card5;
+            .card{
+                background-image: url(/assets/imgs/ImgMesa/mesa1.jpg);
+            }
+        }
+        .card6 {
+            grid-area: card6;
+            .card{
+                background-image: url(/assets/imgs/ImgSillon/sillon1.jpg);
+            }
+        }
+        .card7 {
+            grid-area: card7;
+            .card{
+                background-image: url(/assets/imgs/ImgEscritorio/escritorio1.jpg);
+            }
+        }
+    }
+
+@media screen and (min-width: 768px){
+    .tienda{
+        grid-template-rows: 0.3fr repeat(4,500px);
+        height: auto;
+        padding-bottom: 40em;
+
+		>p{
+			padding-top: 18em;
+		}
+	}
+    .card{
+		margin-bottom: 2em;
+		p{
+			font-size: $grande;
+			padding: 20px;
+		}
+    }
+}

@@ -1,0 +1,18 @@
+Aca va lo que me falta hacer [JS]:
+1-Agregar funciones de control de stock
+2-Agregar funciones de calculo de envios
+3-Agregar funcion de comunicacion por medio de referencias ingresadas por usuario
+4-Agregar funcion de calculo de total de precio por productos (a manera de agregar Al Carrito).
+5-Agregar funcion de aviso de stock disponible (cuantos quedan o si quedan o no).
+6-Generar una base de datos para gestionar el control de todas las variables que se van a usuar en las funciones
+
+Debido a la falta de dom, todas estas funciones no serian mas que pedasos de codigo sin uso, asi que
+voy a esperar a aprenderlo para poder utilizar las funciones en el simulador.
+
+Lo que falta hacer [FrontEnd] 
+1-Completar todos los items (calculo que se podra por medio de clases y constructores)
+2-Mejorar el Footer (Incluirle logos)
+3-Crear Galeria de images responsive (Prioridad baja)
+4-Crear pagina de contacto (footer glorificado prioridad media)
+5-Estilizar mas la pagina (usar mas propiedades de css)
+6-Hacer funcionar el boton de comprar mas o menos items (NECESITO USAR JS PARA ESTO, NECESITO CONECTAR EL FRONT END CON JS PARA EL CONTROL DE STOCK Y NO VENDER DE MAS)

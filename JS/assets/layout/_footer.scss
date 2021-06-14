@@ -1,0 +1,30 @@
+footer {
+    grid-area: footer;
+    background: #121212;
+    text-align: center;
+    width: auto;
+    height: fit-content;
+    padding: 4%;
+    font-size: 1.6em;
+
+
+}
+footer h5 {
+    background: $colorNegro;
+    padding: 4%;
+}
+footer ul {
+    padding: 4%;
+    background: black;
+    width: 100%;
+    height: auto;
+}
+footer ul li{
+    list-style: none;
+}
+footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
