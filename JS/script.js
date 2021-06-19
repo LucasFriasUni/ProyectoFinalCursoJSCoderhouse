@@ -1,8 +1,8 @@
-alert ('TEST');
+
 //Funciones
 
 //Funcion para mostrar el array con productos cargados
-function showProducts() {
+/*function showProducts() {
     let validate = parseInt(prompt('Quieres ver los articulos cargados? 1 para si 0 para no'));
     if (validate === 1) {
         console.log(ArrayProductos);
@@ -36,7 +36,6 @@ function loadProducts () {
     }
 }
 
-
 //Mi array y constructor de productos
 const ArrayProductos = [];
 
@@ -52,13 +51,67 @@ class Producto {
     sumarIva(){
         return this.precio*1.21;
     }
+}*/
+
+
+//DOM
+//Funciones de CargaYDescarga de contador de items
+function sumarUnItem () {
+    let numeroDeItems = document.getElementById("number");
+    numeroDeItems.innerHTML = `${parseInt(numeroDeItems.innerHTML) + 1}`; //Es para tener codigo legible adentro de un string
+    console.log(numeroDeItems);
 }
 
+function restarUnItem () {
+    let numeroDeItems = document.getElementById("number");
+    if (numeroDeItems.innerHTML > 0){
+        numeroDeItems.innerHTML = `${parseInt(numeroDeItems.innerHTML) -1}`;   
+    }
+    console.log(numeroDeItems);
+}
+
+function modificarPrecioXItems () {
+        let precio = document.getElementsByClassName("itemPrice")[0].innerHTML.slice(1); //El slice le saca el signo de peso a la variable
+        let contadorItems = document.getElementById("number").innerHTML;
+        console.log(precio + "*" + contadorItems + "=" + precio * contadorItems);
+}
+
+document.getElementById("increment").addEventListener("click",sumarUnItem);
+document.getElementById("decrement").addEventListener("click",restarUnItem);
+document.getElementsByClassName("addToCart")[0].addEventListener("click",modificarPrecioXItems);
 
 //Llamadas de funciones
-alert ('Proyecto JS Lucas Frias (1ra PreEntrega');
+/*alert ('Proyecto JS Lucas Frias (1ra PreEntrega');
 loadProducts();
-showProducts();
+showProducts();*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Al ser mi primera entrega, en vez de generar multiples funciones
 sin ningun uso debido a mi falta de conocimiento de DOM, prefiero
